@@ -24,7 +24,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THE SOFTWARE CODE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 """
 import argparse
-from srcnn.utils import *
+from utils import *
 import numpy as np
 import os
 import time

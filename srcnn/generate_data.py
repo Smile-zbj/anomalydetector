@@ -25,10 +25,10 @@ POSSIBILITY OF SUCH DAMAGE.
 """
 
 import argparse
-from srcnn.utils import *
+from utils import *
 import os
 import time
-from msanomalydetector.util import average_filter
+from util import average_filter
 
 
 class gen():
@@ -93,7 +93,7 @@ def get_path(data):
     print(fadir, 'fadir')
     files = []
     for eachdir in fadir:
-        files += [dir_ + eachdir + '/' + _ for _ in os.listdir(dir_ + eachdir)]
+        files += ['/content/nbaData16-17/Yahoo_S5_Data/A1Benchmark'+eachdir]
     print(files, 'files')
     return files
 
