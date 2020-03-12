@@ -93,7 +93,7 @@ def get_path(data):
     print(fadir, 'fadir')
     files = []
     for eachdir in fadir:
-        files += ['/content/nbaData16-17/Yahoo_S5_Data/A1Benchmark'+eachdir]
+        files += ['/content/nbaData16-17/Yahoo_S5_Data/A1Benchmark/'+eachdir]
     print(files, 'files')
     return files
 
