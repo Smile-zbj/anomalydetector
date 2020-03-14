@@ -66,8 +66,7 @@ def get_score(data_source, files, thres, option):
         if data_source == 'kpi' or data_source == 'test_kpi':
             in_timestamp, in_value, in_label = read_csv_kpi(f)
         else:
-            tmp_data = read_pkl(f)
-            in_timestamp, in_value, in_label = tmp_data['timestamp'], tmp_data['value'], tmp_data['label']
+            in_timestamp, in_value, in_label = read_csv_kpi(f)
         length = len(in_timestamp)
         if model == 'sr_cnn' and len(in_value) < window:
             print("length is shorter than win_size", len(in_value), window)

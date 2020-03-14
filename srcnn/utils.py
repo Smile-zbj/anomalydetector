@@ -263,9 +263,12 @@ class gen_set(Dataset):
         return resdata, reslb
 
 
-def sr_cnn_eval(timestamp, value, label, window, net, ms_optioin, threshold=0.95, back_k=0, backaddnum=5, step=1):
+def sr_cnn_eval(timestamp, value, label, window, net, ms_optioin, threshold=3, back_k=0, backaddnum=23, step=64):
     def Var(x):
         return Variable(x.cuda())
+
+    print(value, label, window, net, ms_optioin, threshold, back_k, backaddnum, step)
+
 
     def modelwork(x, net):
         with torch.no_grad():
@@ -279,6 +282,7 @@ def sr_cnn_eval(timestamp, value, label, window, net, ms_optioin, threshold=0.95
         return res, aa
 
     win_size = window
+
     length = len(timestamp)
     if back_k <= 5:
         back = back_k
