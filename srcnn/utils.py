@@ -284,4 +284,4 @@ def sr_cnn_eval(timestamp, value, label, window, net, ms_optioin, threshold=0.95
             if detres[i] == 1:
                 last = i
 
-    return timestamp[:].tolist(), label[:], detres[:], scores[:]
+    return timestamp[:], label[:], detres[:], scores[:]
